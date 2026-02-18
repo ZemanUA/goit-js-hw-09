@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback-form label {
+     display: flex;
+     flex-direction: column;
+
+}
+
+.feedback-form button {
+    padding: 0%;
+}
