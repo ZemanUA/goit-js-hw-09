@@ -17,27 +17,31 @@ const formData = {
 
  function handleSubmit(event) {
   event.preventDefault();
+  if(formData.email ===""&& formData.message ==="" ){
+   alert("Email or message are empty");
+  }
+  console.log(formData.email, formData.message);
   event.currentTarget.reset();
-  localStorage.removeItem(STORAGE_KEY);
-  console.log(formData);
-
+  localStorage.removeItem(STORAGE_KEY); 
+  
  }
- // on email input 
+ 
+// on email input 
  email.addEventListener("input", (event) => {
   formData.email = event.target.value;
  })
-
 
 // on textarea input
  textarea.addEventListener("input", textAreaInput)
 
  function textAreaInput(event) {
    const areamessage = event.target.value;
-   localStorage.setItem(STORAGE_KEY, areamessage);
-   formData.message = areamessage;
+    formData.message = areamessage;
+    localStorage.setItem(STORAGE_KEY, areamessage);
+   
  }
 
- // print textarea from local memory
+// print textarea from local memory
  function printTextarea(){
    const newMassage = localStorage.getItem(STORAGE_KEY);
    if(newMassage){

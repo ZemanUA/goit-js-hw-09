@@ -7,9 +7,20 @@
 .feedback-form label {
      display: flex;
      flex-direction: column;
+     gap: 8px;
 
 }
 
-.feedback-form button {
-    padding: 0%;
+textarea, input {
+border-radius: 3%;
+border : 1px solid;
+}
+
+.feedback-form button{
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #4E75FF;
+    color : white;
+    border : none;
+    border-radius: 8px;
 }
