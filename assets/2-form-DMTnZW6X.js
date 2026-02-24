@@ -1,2 +1,2 @@
 const a="feedback-form-state",t={email:"",message:""},r=document.querySelector(".feedback-form"),o=r.querySelector("textarea"),s=r.querySelector("input");c();r.addEventListener("submit",m);function m(e){e.preventDefault(),t.email===""&&t.message===""&&alert("Email or message are empty"),console.log(t.email,t.message),e.currentTarget.reset(),localStorage.removeItem(a)}s.addEventListener("input",e=>{t.email=e.target.value});o.addEventListener("input",l);function l(e){const n=e.target.value;t.message=n,localStorage.setItem(a,n)}function c(){const e=localStorage.getItem(a);e&&(o.value=e)}
-//# sourceMappingURL=form-DMTnZW6X.js.map
+//# sourceMappingURL=2-form-DMTnZW6X.js.map

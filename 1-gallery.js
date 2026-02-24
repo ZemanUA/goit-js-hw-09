@@ -7,4 +7,4 @@ import"./assets/styles-CF4C5Hoy.js";import{S as t}from"./assets/vendor-CgTBfC_f.
 		/>
 	</a>
     </li>`}).join("");n.insertAdjacentHTML("afterbegin",c);new t(".gallery-link",{captionDelay:250,showCounter:!1,captionData:"alt"});
-//# sourceMappingURL=gallery.js.map
+//# sourceMappingURL=1-gallery.js.map
