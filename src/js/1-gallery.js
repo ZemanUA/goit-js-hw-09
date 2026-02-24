@@ -70,7 +70,7 @@ const images = [
  },
 ];
 
-const gallery = document.querySelector(".gallery-list");
+const gallery = document.querySelector(".gallery");
 
 const GalleryItem = images.map(({preview, original, description}) =>
 {
