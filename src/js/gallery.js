@@ -1,6 +1,8 @@
-import "simplelightbox/dist/simple-lightbox.esm"
+import "simplelightbox/dist/simple-lightbox.min.css"
 
 import SimpleLightbox from "simplelightbox";
+
+let countImage = 0;
 
 const images = [
  {
@@ -71,7 +73,10 @@ const images = [
 const gallery = document.querySelector(".gallery-list");
 
 const GalleryItem = images.map(({preview, original, description}) =>
-    `<li class="gallery-item">
+{
+    countImage++;
+    if(countImage <= 9){
+           return `<li class="gallery-item">
 	<a class="gallery-link" href="${preview}">
 		<img 
 		  class="gallery-image" 
@@ -80,6 +85,8 @@ const GalleryItem = images.map(({preview, original, description}) =>
 		/>
 	</a>
     </li>`
+    }
+}
 ).join("");
 gallery.insertAdjacentHTML("afterbegin", GalleryItem);
 
