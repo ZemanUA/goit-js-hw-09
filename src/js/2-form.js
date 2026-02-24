@@ -20,7 +20,7 @@ const formData = {
   if(formData.email ===""&& formData.message ==="" ){
    alert("Email or message are empty");
   }
-  console.log(formData.email, formData.message);
+  console.log(`email -${formData.email}, message -${formData.message}`);
   event.currentTarget.reset();
   localStorage.removeItem(STORAGE_KEY); 
   
@@ -29,6 +29,7 @@ const formData = {
 // on email input 
  email.addEventListener("input", (event) => {
   formData.email = event.target.value;
+  localStorage.setItem(STORAGE_KEY, event.target.value);
  })
 
 // on textarea input

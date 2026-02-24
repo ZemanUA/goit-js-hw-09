@@ -77,10 +77,10 @@ const GalleryItem = images.map(({preview, original, description}) =>
     countImage++;
     if(countImage <= 9){
            return `<li class="gallery-item">
-	<a class="gallery-link" href="${preview}">
+	<a class="gallery-link" href="${original}">
 		<img 
 		  class="gallery-image" 
-		  src="${original}" 
+		  src="${preview}" 
 		  alt="${description}" 
 		/>
 	</a>
@@ -93,5 +93,5 @@ gallery.insertAdjacentHTML("afterbegin", GalleryItem);
 let all = new SimpleLightbox('.gallery-link',{
     captionDelay : 250,
     showCounter : false,
-    captionData : 'alt',
+    captionsData : 'alt',
 });
