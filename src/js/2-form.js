@@ -27,15 +27,15 @@ const formData = {
    alert("Email or message are empty");
    return
   }
-  console.log(`email -${formData.email}, message -${formData.message}`);
-  localStorage.removeItem(STORAGE_KEY); 
+  console.log(formData);
+  localStorage.removeItem(STORAGE_KEY);
+  form.reset(); 
   
  }
  
 // print textarea from local memory
  function printTextarea(){
    const newMassage = JSON.parse(localStorage.getItem(STORAGE_KEY));
-   console.log(newMassage);
    if(newMassage){ 
       textarea.value = newMassage.message;
       formEmail.value = newMassage.email;
