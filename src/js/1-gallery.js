@@ -2,8 +2,6 @@ import "simplelightbox/dist/simple-lightbox.min.css"
 
 import SimpleLightbox from "simplelightbox";
 
-let countImage = 0;
-
 const images = [
  {
   preview:
@@ -73,10 +71,7 @@ const images = [
 const gallery = document.querySelector(".gallery");
 
 const GalleryItem = images.map(({preview, original, description}) =>
-{
-    countImage++;
-    if(countImage <= 9){
-           return `<li class="gallery-item">
+     `<li class="gallery-item">
 	<a class="gallery-link" href="${original}">
 		<img 
 		  class="gallery-image" 
@@ -84,9 +79,7 @@ const GalleryItem = images.map(({preview, original, description}) =>
 		  alt="${description}" 
 		/>
 	</a>
-    </li>`
-    }
-}
+    </li>`  
 ).join("");
 gallery.insertAdjacentHTML("afterbegin", GalleryItem);
 
