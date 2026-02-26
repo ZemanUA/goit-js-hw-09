@@ -12,7 +12,7 @@ const formData = {
 
  form.addEventListener("input", even =>{
 
-    formData[even.target.name] = even.target.value;
+    formData[even.target.name] = even.target.value.trim();
     localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 })
 
@@ -30,6 +30,7 @@ const formData = {
   console.log(formData);
   localStorage.removeItem(STORAGE_KEY);
   form.reset(); 
+  formData.email = "";formData.message = "";
   
  }
  
